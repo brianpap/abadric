@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr" style="width:100%;height:100%" >
+  <head style="width:100%;height:100%" >
+    <meta charset="utf-8">
+    <title>Abadric</title>
+  </head>
+  <style>
+#howtoplay {
+  display:none
+}
+  </style>
+  <body style="width:100%;height:100%" >
+    <svg style="width:100%;height:100%" background-color="red">
+<g id=home>
+      <text x=20% y=19.5% style="font-weight:900;font-size:1000%">Abadric</text>
+      <g id=b1>
+        <rect x="15%" y="20%" width="70%" height="10%" fill="red">
+
+        </rect>
+        <text style="font-weight:900;font-size:500%" x="30%" y=26% fill="black">play</text>
+      </g>
+      <g id=b2 onclick="htp()">
+          <rect x="15%" y="32.5%" width="70%" height="10%" fill="red">
+
+          </rect>
+          <text style="font-weight:900;font-size:500%" x="30%" y=39.5% fill="black">how to play</text>
+      </g>
+      <g id=b3>
+            <rect x="15%" y="45%" width="70%" height="10%" fill="black">
+
+            </rect>
+
+      </g>
+</g>
+<g id="howtoplay">
+<text x=0 y=50%>d to go forward a to go backwerds w to jump||arows to move atack button to atack</text>
+</g>
+    </svg>
+  </body>
+
+  <script type="text/javascript">
+function htp() {
+  document.getElementById("home").style.display = "none";
+  document.getElementById("howtoplay").style.display = "block";
+}
+  </script>
+</html>
