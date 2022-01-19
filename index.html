@@ -8,12 +8,42 @@
 #howtoplay {
   display:none
 }
+#play {
+  display:none;
+  position: absolute;
+  top: 0px;
+  width:100%;
+  height:100%;
+}
+#back {
+  display:none;
+  position: absolute;
+  top: 1%;
+  left: 1%;
+  font-weight:900
+}
+#game1 {
+  display:none;
+  position: absolute;
+  top: 0px;
+  width:100%;
+  height:100%;
+}
+#use1{
+
+}
   </style>
   <body style="width:100%;height:100%" >
-    <svg style="width:100%;height:100%" background-color="red">
-<g id=home>
+
+    <svg width="200px" height="200px" veiwbox="0 0 100% 100%" id="w1">
+    <path d="m 0 0 l 50 50 l 150 0 l -50 -50 z ">
+    </svg>
+
+    <button id="back" onClick="back()">back</button>
+    <svg  style="width:100%;height:100%" background-color="red">
+<g id=home >
       <text x=20% y=19.5% style="font-weight:900;font-size:1000%">Abadric</text>
-      <g id=b1>
+      <g id=b1 onclick="p()">
         <rect x="15%" y="20%" width="70%" height="10%" fill="red">
 
         </rect>
@@ -32,16 +62,70 @@
 
       </g>
 </g>
-<g id="howtoplay">
-<path d="M100 0 V1 H1 V1 H1 V1 H1" />
+
+    </svg>
+    <svg  id=play style="width:100%;height:100%" background-color="red" >
+      <g onclick="game()" class="fullscreen" id=p1 onclick="htp()">
+          <rect x="15%" y="19.5%" width="70%" height="10%" fill="red">
+
+          </rect>
+          <text style="font-weight:900" x="30%" y=26% fill="black">no data</text>
+      </g>
+<g id=p2 onclick="htp()">
+    <rect x="15%" y="32.5%" width="70%" height="10%" fill="red">
+
+    </rect>
+    <text style="font-weight:900" x="30%" y=39.5% fill="black">no data</text>
+</g>
+<g id=p3 onclick="htp()">
+    <rect x="15%" y="45%" width="70%" height="10%" fill="red">
+
+    </rect>
+    <text style="font-weight:900" x="30%" y=50% fill="black">no data</text>
 </g>
     </svg>
+  <svg id="game1" style="width:100%;height:100%" class="fullscreen">
+<rect x="0%" y="0%" width="20%" height="100%" fill="blue" >
+
+</rect>
+<rect id="r1" x="0s" y="0" ry="2%" rx="2%" width="20%" height="10%" fill="red" />
+
+<rect x="0" y="10%" ry="2%" rx="2%" width="20%" height="10%" fill="red" />
+<use  href="#w1" x="20" fill="white" stroke="red" />
+<rect x="0" y="20%" ry="2%" rx="2%" width="20%" height="10%" fill="red" />
+<rect x="0" y="30%" ry="2%" rx="2%" width="20%" height="10%" fill="red" />
+<rect x="0" y="40%" ry="2%" rx="2%" width="20%" height="10%" fill="red" />
+<rect x="0" y="50%" ry="2%" rx="2%" width="20%" height="10%" fill="red" />
+<rect x="0" y="60%" ry="2%" rx="2%" width="20%" height="10%" fill="red" />
+<rect x="0" y="70%" ry="2%" rx="2%" width="20%" height="10%" fill="red" />
+<rect x="0" y="80%" ry="2%" rx="2%" width="20%" height="10%" fill="red" />
+<rect x="0" y="90%" ry="2%" rx="2%" width="20%" height="10%" fill="red" />
+  </svg>
+
   </body>
 
   <script type="text/javascript">
 function htp() {
   document.getElementById("home").style.display = "none";
   document.getElementById("howtoplay").style.display = "block";
+}
+function p() {
+  document.getElementById("home").style.display = "none";
+  document.getElementById("play").style.display = "block";
+  document.getElementById("back").style.display = "block";
+}
+function back() {
+  document.getElementById("home").style.display = "block";
+  document.getElementById("play").style.display = "none";
+  document.getElementById("back").style.display = "none";
+  document.getElementById("howtoplay").style.display = "none";
+}
+function game() {
+  document.getElementById("home").style.display = "none";
+  document.getElementById("game1").style.display = "block";
+  document.getElementById("back").style.display = "block";
+    document.getElementById("play").style.display = "none";
+
 }
   </script>
 </html>
